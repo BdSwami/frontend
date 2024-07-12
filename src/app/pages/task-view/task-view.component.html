@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="leftmenu">
+        <h3>List</h3>
+        <div class="ul-scroll">
+            <ul *ngFor="let tsk of todo">
+                <li (click)="getTask(tsk._id)">{{tsk.title}}</li>
+            </ul>
+        </div>
+        <button (click)="createlist()">create list</button>
+    </div>
+    <div class="right-menu">
+        <h3>Task</h3>
+        <div class="ul-scroll">
+            <div class="todo-itmems" *ngFor="let sbTsk of subTask">
+                <div class="todo">
+                    <p> {{sbTsk.title}} </p>
+
+                    <div class="btns">
+                        <img (click)="deleteTask(ListId,sbTsk._id)" src="./../../../assets/delete.png" alt="delette">
+                        <img (click)="updateTask(ListId,sbTsk._id)" class="ml-10" src="./../../../assets/icons8-edit-30.png" alt="edit">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <button></button> (click)="deleteList()"-->
+        <button style="position: absolute;top: 80%;" (click)="deleteList(ListId)">Delete list</button>
+        <button style="position: absolute;top: 80%;left:55%" (click)="CreateTask()">Create task</button>
+    </div>
+</div>
+
+<div *ngIf="toolTip" class="tool-tip">
+    <div class="tooltip-container">
+        <input type="text" [(ngModel)]="inputValue" placeholder="Enter value">
+        <button (click)="getValue()">Get Value</button>
+    </div>
+</div>
