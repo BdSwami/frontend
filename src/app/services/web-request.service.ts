@@ -21,6 +21,11 @@ export class WebRequestService {
     return this.http.post(`${this.ROOT_URL}/${url}`,{title});
   }
 
+  logregpost(url : string , username : string, password : string){
+    console.log("badll web view " ,url , username,password);
+    return this.http.post(`${this.ROOT_URL}/${url}`,{username,password});
+  }
+
   patch(url : string , payload : Object){
     return this.http.patch(`${this.ROOT_URL}/${url}`,payload);
   }
