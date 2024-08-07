@@ -1,0 +1,255 @@
+
+/* Base Styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  max-width: 1200px; /* Maximum width for larger screens */
+  margin: 0 auto;
+  height: auto;
+  background-color: #f9f9f9; /* Light background color for contrast */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.name-area {
+  background: #ffffff; /* White background for contrast */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  margin-bottom: 20px; /* Space below the name-area */
+}
+
+.name-area h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin: 0;
+  text-align: center;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff; /* White background for contrast */
+  padding: 15px;
+  border-radius: 8px;
+  // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  margin-bottom: 20px; /* Space below the header */
+  margin-top: 15px;
+}
+
+.header h3 {
+  font-size: 1.4em;
+  color: #333;
+  margin: 0;
+}
+
+.add-task-btn {
+  background-color: #28a745; /* Green color for add button */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.add-task-btn:hover {
+  background-color: #218838;
+}
+
+.add-task-btn .material-icons {
+  font-size: 1.2em;
+}
+
+/* Content Styles */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0 20px 20px;
+}
+
+.task-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  display: block;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.task-card:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.task-card.bg-color {
+  background-color: #d4edda; /* Light green background for tasks with count 0 */
+}
+
+.task-card h6 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #007bff; /* Blue color for the count */
+}
+
+.task-card p {
+  margin: 0;
+  font-size: 1em;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-grow: 1;
+}
+
+/* Responsive Styles */
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+
+  .name-area {
+    padding: 10px;
+  }
+
+  .name-area h3 {
+    font-size: 1.3em;
+  }
+
+  .header {
+    padding: 12px;
+  }
+
+  .header h3 {
+    font-size: 1.2em;
+  }
+
+  .add-task-btn {
+    padding: 8px 12px;
+    font-size: 0.9em;
+  }
+
+  .task-card {
+    font-size: 0.9em;
+    padding: 10px;
+  }
+
+  .task-card h6 {
+    font-size: 1em;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+
+  .name-area {
+    padding: 12px;
+  }
+
+  .header {
+    padding: 14px;
+  }
+
+  .header h3 {
+    font-size: 1.3em;
+  }
+
+  .add-task-btn {
+    padding: 8px 12px;
+  }
+
+  .task-card {
+    padding: 12px;
+  }
+
+  .task-card h6 {
+    font-size: 1.1em;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1025px) {
+  .container {
+    padding: 20px;
+  }
+
+  .header {
+    padding: 15px;
+  }
+
+  .header h3 {
+    font-size: 1.4em;
+  }
+
+  .add-task-btn {
+    padding: 10px 15px;
+  }
+
+  .task-card {
+    padding: 15px;
+  }
+
+  .task-card h6 {
+    font-size: 1.2em;
+  }
+}
+
+
+.bg-color {
+  background-color: #ffcccc;
+}
+
+.input-area {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.input-area input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.input-area button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-task-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #007bff;
+  margin-top: 10px;
+}
+
+header{
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0;
+  background-color: white; /* Ensure background color to cover content behind */
+  z-index: 1000;
+}

@@ -1,0 +1,103 @@
+<!-- <div class="container">
+  <div class="name-area">
+    <span class="back-btn">
+      <button class="back-button" (click)="goBack()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14.71 15.29a1 1 0 0 1-1.42 0L9 12.41 5.71 15.71a1 1 0 1 1-1.42-1.42l3.59-3.59a1 1 0 0 1 1.42 0l3.59 3.59z"/>
+        </svg>
+      </button>
+    </span>
+    <h3>Hi Badal need to do this tasks</h3>
+  </div>
+  <div class="header">
+    <h3>Task List</h3>
+    <button>
+      <span class="material-icons" (click)="addTask()">Add</span>
+    </button>
+  </div>
+
+  <div class="content">
+    <div *ngFor="let task of subTask">
+      <div class="task-card">
+         <p>{{task.title}}</p>
+         <div class="buttons">
+          <button>
+            <span class="material-icons">Edite</span>
+          </button>
+          <button>
+            <span class="material-icons">Delete</span>
+          </button>
+         </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- <div class="container">
+  <div class="name-area">
+    <span class="back-btn">
+      <button class="back-button" (click)="goBack()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14.71 15.29a1 1 0 0 1-1.42 0L9 12.41 5.71 15.71a1 1 0 1 1-1.42-1.42l3.59-3.59a1 1 0 0 1 1.42 0l3.59 3.59z"/>
+        </svg>
+      </button>
+    </span>
+    <h3>Hi Badal, you need to do these tasks</h3>
+  </div>
+  <div class="header">
+    <h3>Task List</h3>
+    <button (click)="addTask()">
+      <span class="material-icons">add</span>
+    </button>
+  </div>
+
+  <div class="content">
+    <div *ngFor="let task of subTask" class="task-card">
+      <p>{{task.title}}</p>
+      <div class="buttons">
+        <button (click)="editTask(task._id)">
+          <span class="material-icons">edit</span>
+        </button>
+        <button (click)="deleteTask(task._id)">
+          <span class="material-icons">delete</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<div class="container">
+  <header >
+    <div class="name-area">
+      <button class="back-button" (click)="goBack()" aria-label="Back to previous page">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14.71 15.29a1 1 0 0 1-1.42 0L9 12.41 5.71 15.71a1 1 0 1 1-1.42-1.42l3.59-3.59a1 1 0 0 1 1.42 0l3.59 3.59z"/>
+        </svg>
+      </button>
+      <h3>Hi Badal, you need to do these tasks</h3>
+    </div>
+    <div class="header">
+      <h3>Task List</h3>
+    <button class="add-task-btn" (click)="addTask()" aria-label="Add a new task">
+      <span class="material-icons">add</span>
+    </button>
+    </div>
+  </header>
+
+  <section class="content">
+    <div *ngFor="let task of subTask" class="task-card">
+      <p>{{task.title}}</p>
+      <div class="buttons">
+        <button  aria-label="Edit task">
+          <span class="material-icons">edit</span>
+        </button>
+        <button  aria-label="Delete task">
+          <span class="material-icons">delete</span>
+        </button>
+      </div>
+    </div>
+  </section>
+</div>
+
+

@@ -1,0 +1,525 @@
+// .container{
+//   width: 100%;
+//   background: black;
+//   height: 100vh;
+//   padding: 30px 24px;
+//   .name-area{
+//     font-size: 24px;
+//     color: aliceblue;
+//     font-weight: 500;
+//     padding-top: 20px;
+//   }
+//   .back-button {
+//     background: none;
+//     border: none;
+//     cursor: pointer;
+//   }
+//   .header{
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     margin-top: 30px;
+//     h3{
+//       font-size: 24px;
+//       font-weight: 500;
+//       color: aliceblue;
+//       margin: 0;
+//     }
+//     button {
+//       // padding: 8px;
+//       background-color: transparent;
+//       color: gainsboro;
+//       border: none;
+//       border-radius: 4px;
+//       cursor: pointer;
+//     }
+//   }
+
+//   .content{
+//     // display: flex;
+//     justify-content: space-around;
+//     margin-top: 25px;
+//     align-items: start;
+//     .task-card{
+//       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+//       padding: 10px;
+//       min-width: 100%;
+//       background: #0b0b0b;
+//       overflow: hidden;
+//       display: inline-block;
+//       margin-right: 5px;
+//       border-radius: 10px;
+//       cursor: pointer;
+//       .buttons{
+//         float: right;
+//         button {
+//           background-color: transparent;
+//           color: gainsboro;
+//           border: none;
+//           border-radius: 4px;
+//           cursor: pointer;
+//         }
+//       }
+//       p{
+//         font-size: 14px;
+//         font-weight: 400;
+//         color: aliceblue;
+//       }
+      
+//     }
+//   }
+// }
+
+/* Base Styles */
+// .container {
+//   display: flex;
+//   flex-direction: column;
+//   padding: 20px;
+//   max-width: 1200px; /* Maximum width for larger screens */
+//   margin: 0 auto;
+//   gap: 20px;
+//   background-color: #f9f9f9; /* Light background color */
+//   border-radius: 8px; /* Rounded corners */
+// }
+
+// .name-area {
+//   display: flex;
+//   align-items: center;
+//   gap: 10px;
+// }
+
+// .back-btn {
+//   display: flex;
+//   align-items: center;
+// }
+
+// .back-button {
+//   background-color: #007bff;
+//   color: white;
+//   border: none;
+//   padding: 8px;
+//   border-radius: 50%;
+//   cursor: pointer;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// .back-button svg {
+//   fill: #fff;
+// }
+
+// .back-button:hover {
+//   background-color: #0056b3;
+// }
+
+// .name-area h3 {
+//   font-size: 1.5em;
+//   color: #333;
+//   margin: 0;
+// }
+
+/* Header Styles */
+// .header {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   padding: 10px 0;
+// }
+
+// .header h3 {
+//   font-size: 1.2em;
+//   color: #333;
+//   margin: 0;
+// }
+
+// .header button {
+//   background-color: #007bff;
+//   color: white;
+//   border: none;
+//   padding: 10px 15px;
+//   border-radius: 5px;
+//   cursor: pointer;
+//   display: flex;
+//   align-items: center;
+//   gap: 5px;
+// }
+
+// .header button:hover {
+//   background-color: #0056b3;
+// }
+
+// .header .material-icons {
+//   font-size: 1.2em;
+// }
+
+/* Content Styles */
+// .content {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 10px;
+// }
+
+// .task-card {
+//   background: #fff;
+//   border: 1px solid #ddd;
+//   border-radius: 8px;
+//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+//   padding: 10px;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   cursor: pointer;
+//   transition: background-color 0.3s;
+// }
+
+// .task-card:hover {
+//   background-color: #f0f0f0;
+// }
+
+// .task-card p {
+//   margin: 0;
+//   font-size: 1em;
+//   color: #333;
+// }
+
+// .buttons {
+//   display: flex;
+//   gap: 10px;
+// }
+
+// .buttons button {
+//   background: #007bff;
+//   border: none;
+//   border-radius: 5px;
+//   padding: 5px 8px;
+//   color: #fff;
+//   cursor: pointer;
+//   font-size: 0.9em;
+//   display: flex;
+//   align-items: center;
+// }
+
+// .buttons button:hover {
+//   background: #0056b3;
+// }
+
+// .buttons .material-icons {
+//   font-size: 1em;
+// }
+
+/* Responsive Styles */
+
+/* Mobile Styles */
+// @media (max-width: 768px) {
+//   .container {
+//     padding: 15px;
+//     gap: 15px;
+//   }
+
+//   .name-area {
+//     flex-direction: column;
+//     align-items: flex-start;
+//     gap: 10px;
+//   }
+
+//   .back-button {
+//     padding: 5px;
+//   }
+
+//   .header h3 {
+//     font-size: 1em;
+//   }
+
+//   .header button {
+//     padding: 8px 12px;
+//     font-size: 0.9em;
+//   }
+
+//   .task-card {
+//     font-size: 0.9em;
+//     padding: 8px;
+//   }
+
+//   .buttons button {
+//     padding: 4px 6px;
+//   }
+
+//   .buttons .material-icons {
+//     font-size: 0.9em;
+//   }
+// }
+
+/* Tablet Styles */
+// @media (min-width: 769px) and (max-width: 1024px) {
+//   .container {
+//     padding: 20px;
+//     gap: 20px;
+//   }
+
+//   .task-card {
+//     padding: 12px;
+//   }
+
+//   .buttons button {
+//     padding: 6px 10px;
+//   }
+
+//   .buttons .material-icons {
+//     font-size: 1em;
+//   }
+// }
+
+/* Desktop Styles */
+// @media (min-width: 1025px) {
+//   .container {
+//     padding: 20px;
+//     gap: 20px;
+//   }
+
+//   .task-card {
+//     padding: 15px;
+//   }
+
+//   .buttons button {
+//     padding: 8px 12px;
+//   }
+
+//   .buttons .material-icons {
+//     font-size: 1.2em;
+//   }
+// }
+
+/* Base Styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  max-width: 1200px; /* Maximum width for larger screens */
+  margin: 0 auto;
+  gap: 15px;
+  background-color: #f4f4f9; /* Light background color for contrast */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  height: 100vh;
+}
+
+.name-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff; /* White background for contrast */
+  padding: 10px;
+  border-radius: 8px;
+  // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.back-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+.back-button svg {
+  fill: #fff;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff; /* White background for contrast */
+  padding: 10px 15px;
+  border-radius: 8px;
+  // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.header h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin: 0;
+}
+
+.add-task-btn {
+  background-color: #28a745; /* Green color for add button */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.3s;
+}
+
+.add-task-btn:hover {
+  background-color: #218838;
+}
+
+.add-task-btn .material-icons {
+  font-size: 1.2em;
+}
+
+/* Content Styles */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0 15px;
+}
+
+.task-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.task-card:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.task-card p {
+  margin: 0;
+  font-size: 1em;
+  color: #333;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.buttons button {
+  background: #007bff; /* Primary color for buttons */
+  border: none;
+  border-radius: 5px;
+  padding: 6px 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+  background: #0056b3;
+}
+
+.buttons .material-icons {
+  font-size: 1em;
+}
+
+/* Responsive Styles */
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .container {
+    // padding: 15px;
+    gap: 15px;
+  }
+
+  .name-area {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .back-button {
+    padding: 6px;
+  }
+
+  .header h3 {
+    font-size: 1.2em;
+  }
+
+  .add-task-btn {
+    padding: 8px 12px;
+    font-size: 0.9em;
+  }
+
+  .task-card {
+    font-size: 0.9em;
+    padding: 10px;
+  }
+
+  .buttons button {
+    padding: 4px 6px;
+  }
+
+  .buttons .material-icons {
+    font-size: 0.9em;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    // padding: 20px;
+    gap: 20px;
+  }
+
+  .task-card {
+    padding: 12px;
+  }
+
+  .buttons button {
+    padding: 6px 10px;
+  }
+
+  .buttons .material-icons {
+    font-size: 1em;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1025px) {
+  .container {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .task-card {
+    padding: 15px;
+  }
+
+  .buttons button {
+    padding: 8px 12px;
+  }
+
+  .buttons .material-icons {
+    font-size: 1.2em;
+  }
+}
+
+header{
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0;
+  background-color: white; /* Ensure background color to cover content behind */
+  z-index: 1000;
+}

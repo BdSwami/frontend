@@ -1,0 +1,82 @@
+.app-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.todo-form {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.todo-form input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.todo-form button {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-list li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.todo-list li:last-child {
+  border-bottom: none;
+}
+
+.todo-list input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.task-text {
+  flex: 1;
+  font-size: 16px;
+}
+
+.task-text.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.delete-btn {
+  padding: 6px 12px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .todo-form input[type="text"] {
+    font-size: 14px;
+  }
+
+  .todo-form button,
+  .delete-btn {
+    font-size: 12px;
+  }
+}

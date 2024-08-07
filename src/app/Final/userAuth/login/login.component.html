@@ -1,0 +1,22 @@
+<div class="card text-center">
+  <div class="card-body">
+    <h5 class="card-title">Login</h5>
+    <form (ngSubmit)="login()">
+      <div class="form-floating mb-3 mt-20">
+        <input type="text"  class="form-control" id="floatingInput" placeholder="name@example.com" name="username" [(ngModel)]="formData.username" required>
+        <label for="floatingInput">Email address</label>
+      </div>
+      <!-- [(ngModel)]="formData.password" (click)="login()" -->
+      <div class="form-floating">
+        <input type="text"  class="form-control" id="floatingPassword" placeholder="Password" name="password" [(ngModel)]="formData.password" required>
+        <label for="floatingPassword">Password</label>
+      </div>
+      <div class="d-grid gap-2 col-6 mx-auto mt-20">
+        <button class="btn btn-primary" type="submit" >Submit</button>
+      </div>
+    </form>
+  </div>
+  <div class="gap-5">
+    <button (click)="register()" type="button" class="btn" data-bs-toggle="button">Register Now</button>
+  </div>
+</div>

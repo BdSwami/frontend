@@ -2,31 +2,33 @@
     <div class="leftmenu">
         <h3>List</h3>
         <div class="ul-scroll">
-            <ul *ngFor="let tsk of todo">
-                <li (click)="getTask(tsk._id)">{{tsk.title}}</li>
+            <ul>
+                <li *ngFor="let tsk of todo" (click)="getTask(tsk._id)">
+                    {{tsk.title}}
+                </li>
             </ul>
         </div>
-        <button (click)="createlist()">create list</button>
+        <button (click)="createlist()">Create List</button>
     </div>
     <div class="right-menu">
         <h3>Task</h3>
+        <!-- <app-create-title></app-create-title> -->
         <div class="ul-scroll">
-            <div class="todo-itmems" *ngFor="let sbTsk of subTask">
+            <div class="todo-items" *ngFor="let sbTsk of subTask">
                 <div class="todo">
-                    <p> {{sbTsk.title}} </p>
-
+                    <p>{{sbTsk.title}}</p>
                     <div class="btns">
-                        <img (click)="deleteTask(ListId,sbTsk._id)" src="./../../../assets/delete.png" alt="delette">
-                        <img (click)="updateTask(ListId,sbTsk._id)" class="ml-10" src="./../../../assets/icons8-edit-30.png" alt="edit">
+                        <img (click)="deleteTask(ListId,sbTsk._id)" src="./../../../assets/delete.png" alt="Delete">
+                        <img (click)="updateTask(ListId,sbTsk._id)" class="ml-10" src="./../../../assets/icons8-edit-30.png" alt="Edit">
                     </div>
                 </div>
             </div>
         </div>
-        <!-- <button></button> (click)="deleteList()"-->
-        <button style="position: absolute;top: 80%;" (click)="deleteList(ListId)">Delete list</button>
-        <button style="position: absolute;top: 80%;left:55%" (click)="CreateTask()">Create task</button>
+        <button class="delete-list-btn" (click)="deleteList(ListId)">Delete List</button>
+        <button class="create-task-btn" (click)="CreateTask()">Create Task</button>
     </div>
 </div>
+
 
 <div *ngIf="toolTip" class="tool-tip">
     <div class="tooltip-container">

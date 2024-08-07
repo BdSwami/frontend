@@ -1,4 +1,15 @@
-<div class="container">
-    <input type="text">
-    <button>submit</button>
-</div>
+<div class="app-container">
+    <h1>Todo List</h1>
+    <div class="todo-form">
+      <input type="text" placeholder="Enter task" [(ngModel)]="newTask" (keyup.enter)="addTask()">
+      <button (click)="addTask()">Add</button>
+    </div>
+    <ul class="todo-list">
+      <li *ngFor="let task of tasks; let i = index">
+        <input type="checkbox" [checked]="task.completed" (change)="toggleTask(i)">
+        <span class="task-text" [class.completed]="task.completed">{{ task.text }}</span>
+        <button class="delete-btn" (click)="deleteTask(i)">Delete</button>
+      </li>
+    </ul>
+  </div>
+  

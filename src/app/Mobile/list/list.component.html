@@ -1,0 +1,31 @@
+<div class="container">
+  <header>
+    <div >
+      <h3>Hi Badal, Here’s Your Task List</h3>
+    </div>
+    <div class="header">
+      <h3>Task List</h3>
+      <button class="add-task-btn" aria-label="Create a new list" (click)="toggleInput()">
+      <span class="material-icons">add</span>
+    </button>
+    </div>
+    <div *ngIf="showInput" class="input-area">
+      <input type="text" [(ngModel)]="taskTitle" placeholder="Enter task title" />
+      <button (click)="saveTask()">Save</button>
+    </div>
+  </header>
+  <section class="content">
+    <div *ngFor="let item of todo; let i = index;">
+      <div 
+        class="task-card" 
+        (click)="goToTask(item.id)" 
+        [ngClass]="{'bg-color': countList[i] == 0}">
+        <h6>{{map.get(item.id)}}</h6>
+        <p>{{item.title}}</p>
+        <button class="edit-task-btn" (click)="editTask(item.id, item.title)">Edit</button>
+      </div>
+    </div>
+  </section>
+ 
+</div>
+

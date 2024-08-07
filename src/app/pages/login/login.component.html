@@ -2,7 +2,7 @@
     <!-- register.component.html -->
 
 <div class="container">
-  <h2>User Registration</h2>
+  <h2>User Login</h2>
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="username">Username:</label>
@@ -12,7 +12,7 @@
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" [(ngModel)]="formData.password" required>
     </div>
-    <button type="submit">Register</button>
+    <button type="submit">Login</button>
   </form>
   <p *ngIf="message">{{ message }}</p>
 </div>
